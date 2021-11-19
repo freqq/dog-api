@@ -1,12 +1,12 @@
 import { Breed, DogResponse } from 'types';
 import { capitalizeString } from 'utils/string';
 
-export const getBreedName = (breed: string, subBreed?: string): string =>
+const getBreedName = (breed: string, subBreed?: string): string =>
   subBreed
     ? [capitalizeString(subBreed), capitalizeString(breed)].join(' ')
     : capitalizeString(breed);
 
-export const getBreedURL = (breed: string, subBreed?: string): string =>
+const getBreedURL = (breed: string, subBreed?: string): string =>
   subBreed ? `${breed}/${subBreed}` : breed;
 
 const generateNewBreed = (breed: string, subBreed?: string): Breed => ({

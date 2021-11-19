@@ -31,7 +31,7 @@ const DogModal = () => {
     >
       <DogModalWrapper>
         <ModalButtons onClose={onModalClose} onRandom={reFetch} />
-        <DogName>{chosenBreed?.name || '-'}</DogName>
+        <DogName>{chosenBreed?.name || 'Unknown breed'}</DogName>
         {isLoading ? <Loader /> : <DogImage src={data?.message} alt="dog-thumbnail" />}
       </DogModalWrapper>
     </Modal>

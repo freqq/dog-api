@@ -11,7 +11,7 @@ const useFetch = <T>(url: string, options?: object) => {
       setIsLoading(true);
 
       try {
-        const response = await fetch(url as string, options);
+        const response = await fetch(url, options);
         const responseJSON = await response.json();
         setData(responseJSON);
       } catch {
