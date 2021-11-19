@@ -1,5 +1,7 @@
 # Dog API
 
+App available at [https://dog-api-freq.herokuapp.com](https://dog-api-freq.herokuapp.com).
+
 Things to improve (not included in task therefore not implemented):
 
 - Maybe some kind of pagination

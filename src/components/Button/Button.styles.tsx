@@ -25,7 +25,7 @@ export const ButtonWrapper = styled.button`
 
 export const ButtonText = styled.p`
   margin: 0;
-  font-size: 12px;
+  font-size: 14px;
 `;
 
 export const ButtonIcon = styled.img`

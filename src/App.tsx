@@ -6,6 +6,7 @@ import Navbar from 'components/Navbar';
 import BreedCounter from 'components/BreedCounter';
 import DogsList from 'components/DogsList';
 import DogModal from 'components/DogModal';
+import Footer from 'components/Footer';
 
 import GlobalStyle from 'globalStyles';
 import useFetch from 'hooks/useFetch';
@@ -39,6 +40,7 @@ const App = () => {
       <BreedCounter />
       <DogsList />
       <DogModal />
+      <Footer />
       <GlobalStyle />
     </AppContext.Provider>
   );

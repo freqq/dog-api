@@ -4,7 +4,7 @@ import { Breed } from 'types';
 import { DogsListWrapper } from 'components/DogsList/DogsList.styles';
 import { useGlobalContext } from 'appContext';
 
-const DogsList: React.FC = () => {
+const DogsList = () => {
   const { flattenedBreeds, onModalOpen } = useGlobalContext();
 
   return (

@@ -11,6 +11,9 @@ export const NavbarWrapper = styled.nav`
 
 export const NavbarText = styled.h1`
   margin: 0;
-  font-family: Arial, 'sans-serif';
   font-size: 35px;
+`;
+
+export const DogEmoji = styled.span`
+  margin-left: 20px;
 `;

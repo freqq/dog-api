@@ -1,4 +1,3 @@
-import React from 'react';
 import Modal from 'react-modal';
 
 import Loader from 'components/Loader';
@@ -16,7 +15,7 @@ const MODAL_STYLES = {
   },
 };
 
-const DogModal: React.FC = () => {
+const DogModal = () => {
   const { chosenBreed, isModal, onModalClose } = useGlobalContext();
   const { data, isLoading, reFetch } = useFetch<DogImageResponse>(
     RANDOM_IMAGE_BY_BREED(chosenBreed?.url || ''),
