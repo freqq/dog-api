@@ -15,7 +15,7 @@ export const DogImage = styled.img`
   display: block;
   height: 80%;
   max-height: 90%;
-  border: 2px solid #333;
   border-radius: 4px;
   margin: 0 auto;
+  max-width: 100%;
 `;
