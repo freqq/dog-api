@@ -40,7 +40,7 @@ const App = () => {
       <BreedCounter />
       <DogsList />
       <Footer />
-      {chosenBreed ? <DogModal /> : null}
+      {isModal ? <DogModal /> : null}
       <GlobalStyle />
     </AppContext.Provider>
   );

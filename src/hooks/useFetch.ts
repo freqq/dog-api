@@ -4,7 +4,9 @@ const useFetch = <T>(url: string, options?: object) => {
   const [data, setData] = useState<T | undefined>(undefined);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [isError, setIsError] = useState<boolean>(false);
-  const [refetch, setRefetch] = useState(false);
+  const [refetch, setRefetch] = useState<boolean>(false);
+
+  const reFetch = () => setRefetch(!refetch);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -23,8 +25,6 @@ const useFetch = <T>(url: string, options?: object) => {
 
     fetchData();
   }, [url, options, refetch]);
-
-  const reFetch = () => setRefetch(!refetch);
 
   return { data, isLoading, isError, reFetch };
 };
