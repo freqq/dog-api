@@ -21,9 +21,7 @@ export const flattenDogsResponse = (dogsResponse: DogResponse): Breed[] => {
     const breedArray = dogsResponse.message[breed];
 
     if (breedArray.length > 0)
-      breedArray.forEach((subBreed: string) => {
-        returnArray.push(generateNewBreed(breed, subBreed));
-      });
+      returnArray.push(...breedArray.map((subBreed: string) => generateNewBreed(breed, subBreed)));
     else returnArray.push(generateNewBreed(breed));
   });
 

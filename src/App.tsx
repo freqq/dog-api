@@ -39,8 +39,8 @@ const App = () => {
       <Navbar />
       <BreedCounter />
       <DogsList />
-      {chosenBreed ? <DogModal /> : null}
       <Footer />
+      {chosenBreed ? <DogModal /> : null}
       <GlobalStyle />
     </AppContext.Provider>
   );
