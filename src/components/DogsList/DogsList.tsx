@@ -5,7 +5,12 @@ import { DogsListWrapper } from 'components/DogsList/DogsList.styles';
 import { useGlobalContext } from 'appContext';
 
 const DogsList = () => {
-  const { flattenedBreeds, onModalOpen } = useGlobalContext();
+  const { flattenedBreeds, setChosenBreed, setIsModal } = useGlobalContext();
+
+  const onModalOpen = (breed: Breed) => {
+    setChosenBreed(breed);
+    setIsModal(true);
+  };
 
   return (
     <DogsListWrapper>

@@ -25,16 +25,9 @@ const App = () => {
     if (data) setFlattenedBreeds(flattenDogsResponse(data));
   }, [data]);
 
-  const onModalClose = () => setIsModal(false);
-
-  const onModalOpen = (breed: Breed) => {
-    setChosenBreed(breed);
-    setIsModal(true);
-  };
-
   return (
     <AppContext.Provider
-      value={{ chosenBreed, flattenedBreeds, isModal, onModalClose, onModalOpen }}
+      value={{ chosenBreed, flattenedBreeds, isModal, setChosenBreed, setIsModal }}
     >
       <Navbar />
       <BreedCounter />

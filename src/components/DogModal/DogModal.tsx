@@ -16,10 +16,12 @@ const MODAL_STYLES = {
 };
 
 const DogModal = () => {
-  const { chosenBreed, isModal, onModalClose } = useGlobalContext();
+  const { chosenBreed, isModal, setIsModal } = useGlobalContext();
   const { data, isLoading, reFetch } = useFetch<DogImageResponse>(
     RANDOM_IMAGE_BY_BREED(chosenBreed?.url || ''),
   );
+
+  const onModalClose = () => setIsModal(false);
 
   return (
     <Modal
